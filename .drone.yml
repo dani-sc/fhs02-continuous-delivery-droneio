@@ -13,8 +13,8 @@ pipeline:
       - ./brakeman.sh
       - git config --global user.name ${GITHUB_NAME}
       - git config --global user.email ${GITHUB_EMAIL}
-      - git checkout security-checks
       - git stash
+      - git checkout security-checks
       - git add brakeman-report.json
       - git commit -m 'Update brakeman-report'
       - git stash apply
