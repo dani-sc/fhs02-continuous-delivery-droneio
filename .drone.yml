@@ -4,8 +4,9 @@ pipeline:
     commands:
       - git fetch origin security-checks
       - git branch
-      - bundle install
-      - bundle exec rspec
+      - git checkout security-checks
+      #- bundle install
+      #- bundle exec rspec
   #security-checks:
     #image: ruby:2.4.1
     #commands:
