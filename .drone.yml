@@ -5,9 +5,9 @@ pipeline:
       - bundle install
       - bundle exec rspec
   security-checks:
-    #image: ruby:2.4.1
+    image: ruby:2.4.1
     commands:
-      #- bundle install
+      - bundle install
       - git fetch origin security-checks
       - git show security-checks:brakeman-report.json > brakeman-report.json
       - ./brakeman.sh
