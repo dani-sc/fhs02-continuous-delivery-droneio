@@ -1,0 +1,6 @@
+pipeline:
+  build:
+    image: ruby:2.4.1
+    commands:
+      - ls -al
+      - ruby -v
