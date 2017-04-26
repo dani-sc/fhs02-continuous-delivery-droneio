@@ -6,14 +6,12 @@ pipeline:
   #    - bundle exec rspec
   security-checks:
     image: ruby:2.4.1
-    environment: 
-      - GITHUB_EMAIL=${GITHUB_EMAIL}
     commands:
       #- bundle install
       #- git fetch origin security-checks
       #- git show origin/security-checks:brakeman-report.json > brakeman-report.json
       #- ./brakeman.sh
-      - 'git config --global user.email ${GITHUB_EMAIL}'
+      - 'git config --global user.email ${test}'
       #- git config --global user.name ${GITHUB_NAME}
       #- git checkout security-checks
       #- git add brakeman-report.json
