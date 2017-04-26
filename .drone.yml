@@ -11,8 +11,8 @@ pipeline:
       #- git fetch origin security-checks
       #- git show origin/security-checks:brakeman-report.json > brakeman-report.json
       #- ./brakeman.sh
-      - echo $test
-      - git config --global user.email $test
+      - echo ${test}
+      - git config --global user.email ${test}
       #- git config --global user.name ${GITHUB_NAME}
       #- git checkout security-checks
       #- git add brakeman-report.json
