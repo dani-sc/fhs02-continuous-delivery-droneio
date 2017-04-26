@@ -1,11 +1,11 @@
 {
   "scan_info": {
-    "app_path": "/Users/lukasklappert/Studium/Master/2. Semester/Cont/fhs02-continuous-delivery-droneio",
+    "app_path": "/drone/src/github.com/luklapp/fhs02-continuous-delivery-droneio",
     "rails_version": "5.0.2",
     "security_warnings": 0,
-    "start_time": "2017-04-26 11:24:02 +0200",
-    "end_time": "2017-04-26 11:24:03 +0200",
-    "duration": 0.37295,
+    "start_time": "2017-04-26 12:04:30 +0000",
+    "end_time": "2017-04-26 12:04:30 +0000",
+    "duration": 0.148963687,
     "checks_performed": [
       "BasicAuth",
       "BasicAuthTimingAttack",
@@ -74,7 +74,7 @@
     "number_of_controllers": 2,
     "number_of_models": 2,
     "number_of_templates": 7,
-    "ruby_version": "2.2.3",
+    "ruby_version": "2.4.1",
     "brakeman_version": "3.6.1"
   },
   "warnings": [
