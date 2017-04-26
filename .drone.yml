@@ -1,6 +1,12 @@
 pipeline:
-  build:
+  integration-tests:
     image: ruby:2.4.1
     commands:
-      - ls -al
-      - ruby -v
+      - cd blog
+      - bundle install
+      - bundle exec rspec
+      - git branch
+  #security-checks:
+    #image: ruby:2.4.1
+    #commands:
+      
