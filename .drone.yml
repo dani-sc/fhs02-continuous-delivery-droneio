@@ -9,7 +9,7 @@ pipeline:
     commands:
       - bundle install
       - git fetch origin security-checks
-      - git show security-checks:brakeman-report.json > brakeman-report.json
+      - git show origin/security-checks:brakeman-report.json > brakeman-report.json
       - ./brakeman.sh
       - git config --global user.email ${GITHUB_EMAIL}
       - git config --global user.name ${GITHUB_NAME}
