@@ -7,14 +7,12 @@ pipeline:
   security-checks:
     image: ruby:2.4.1
     commands:
-      #- bundle install
-      #- git fetch origin security-checks
-      #- git show origin/security-checks:brakeman-report.json > brakeman-report.json
-      #- ./brakeman.sh
-      - echo ${test}
-      - git config --global user.email ${test}
-      #- git config --global user.name ${GITHUB_NAME}
-      #- git checkout security-checks
-      #- git add brakeman-report.json
-      #- git commit -m 'Update brakeman-report'
-      #- git push https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com/luklapp/fhs02-continuous-delivery-droneio.git --all
+      - bundle install
+      - git fetch origin security-checks
+      - git show origin/security-checks:brakeman-report.json > brakeman-report.json
+      - ./brakeman.sh
+      - git config --global user.name ${GITHUB_NAME}
+      - git checkout security-checks
+      - git add brakeman-report.json
+      - git commit -m 'Update brakeman-report'
+      - git push https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com/luklapp/fhs02-continuous-delivery-droneio.git --all
