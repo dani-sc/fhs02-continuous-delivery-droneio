@@ -16,6 +16,7 @@ pipeline:
       - git add .
       - git stash
       - git checkout security-checks
+      - git rm brakeman-report.json
       - git stash apply
       - git add brakeman-report.json
       - git commit -m 'Update brakeman-report'
