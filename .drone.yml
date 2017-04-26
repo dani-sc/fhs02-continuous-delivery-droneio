@@ -6,7 +6,8 @@ pipeline:
   #    - bundle exec rspec
   security-checks:
     image: ruby:2.4.1
-    environment: GITHUB_EMAIL=${GITHUB_EMAIL}
+    environment: 
+      - GITHUB_EMAIL=${GITHUB_EMAIL}
     commands:
       #- bundle install
       #- git fetch origin security-checks
