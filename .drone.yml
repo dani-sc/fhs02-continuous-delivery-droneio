@@ -1,9 +1,9 @@
 pipeline:
-  integration-tests:
-    image: ruby:2.4.1
-    commands:
-      - bundle install
-      - bundle exec rspec
+  #integration-tests:
+  #  image: ruby:2.4.1
+  #  commands:
+  #    - bundle install
+  #    - bundle exec rspec
   security-checks:
     image: ruby:2.4.1
     commands:
