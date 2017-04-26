@@ -2,12 +2,17 @@ pipeline:
   integration-tests:
     image: ruby:2.4.1
     commands:
-      - git fetch origin security-checks
-      - git branch
+      - bundle install
+      - bundle exec rspec
+  security-checks:
+    image: ruby:2.4.1
+    commands:
+      - bundle install
+      - git show security-checks:brakeman-report.json > brakeman-report.json
+      - ./brakeman.sh
+      - git config --global user.email ${GITHUB_EMAIL}
+      - git config --global user.name ${GITHUB_NAME}
       - git checkout security-checks
-      #- bundle install
-      #- bundle exec rspec
-  #security-checks:
-    #image: ruby:2.4.1
-    #commands:
-      
+      - git add brakeman-report.json
+      - git commit -m 'Update brakeman-report'
+      - git push https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com/luklapp/fhs02-continuous-delivery-droneio.git --all
