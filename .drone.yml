@@ -18,6 +18,7 @@ pipeline:
       - git checkout security-checks
       - git rm brakeman-report.json
       - git stash apply
+      - git reset .
       - git add brakeman-report.json
       - git commit -m 'Update brakeman-report'
       - git push https://${GITHUB_USERNAME}:${GITHUB_PASSWORD}@github.com/luklapp/fhs02-continuous-delivery-droneio.git --all

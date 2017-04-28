@@ -9,11 +9,12 @@ services:
       - ./drone:/var/lib/drone/
     restart: always
     environment:
-      - DRONE_OPEN=true
+      - DRONE_OPEN=false
       - DRONE_GITHUB=true
       - DRONE_GITHUB_CLIENT=${DRONE_GITHUB_CLIENT}
       - DRONE_GITHUB_SECRET=${DRONE_GITHUB_SECRET}
       - DRONE_SECRET=${DRONE_SECRET}
+      - DRONE_ADMIN=luklapp
 
   drone-agent:
     image: drone/drone:0.6
