@@ -3,9 +3,9 @@
     "app_path": "/drone/src/github.com/luklapp/fhs02-continuous-delivery-droneio",
     "rails_version": "5.0.2",
     "security_warnings": 0,
-    "start_time": "2017-04-26 12:04:30 +0000",
-    "end_time": "2017-04-26 12:04:30 +0000",
-    "duration": 0.148963687,
+    "start_time": "2017-04-28 08:23:47 +0000",
+    "end_time": "2017-04-28 08:23:47 +0000",
+    "duration": 0.171036089,
     "checks_performed": [
       "BasicAuth",
       "BasicAuthTimingAttack",
